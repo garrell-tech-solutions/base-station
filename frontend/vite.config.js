@@ -5,10 +5,11 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   root: '.',
-  publicDir: path.resolve(__dirname, '../'),
+  publicDir: 'public',
+  base: './',
   build: {
     outDir: path.resolve(__dirname, '../docs'),
-    emptyOutDir: true,
+    emptyOutDir: false,
   },
   server: {
     fs: {
